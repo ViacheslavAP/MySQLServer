@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".tabs.PanelEditProductFragment">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headerEditProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="60dp"
+            android:textColor="@color/black"
+            android:text="@string/editProduct"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sectionEditNameProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/headerEditProduct"
+            android:layout_margin="10dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeColor="@color/purple_500"
+            app:startIconTint="@color/black"
+            app:endIconTint="@android:color/holo_red_light"
+            android:hint="@string/labelEnterNameProduct"
+            app:hintTextColor="@color/teal_200"
+            app:startIconDrawable="@drawable/ic_catalog_categories"
+            app:endIconMode="clear_text"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNameProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/ic_cursor"
+                android:background="@drawable/round_edit_text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sectionEditCategoryProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sectionEditNameProduct"
+            android:layout_margin="10dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeColor="@color/purple_200"
+            app:startIconTint="@color/black"
+            app:endIconTint="@android:color/holo_red_light"
+            android:hint="@string/labelEnterCategory"
+            app:hintTextColor="@color/teal_200"
+            app:startIconDrawable="@drawable/ic_catalog_products"
+            app:endIconMode="clear_text"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editCategoryProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:background="@drawable/round_edit_text"
+                android:textCursorDrawable="@drawable/ic_cursor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sectionEditPriceProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sectionEditCategoryProduct"
+            android:layout_margin="10dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeColor="@color/purple_200"
+            app:startIconTint="@color/black"
+            app:endIconTint="@android:color/holo_red_light"
+            android:hint="@string/labelEnterPriceProduct"
+            app:hintTextColor="@color/teal_200"
+            app:startIconDrawable="@drawable/ic_library"
+            app:endIconMode="clear_text"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPriceProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:background="@drawable/round_edit_text"
+                android:textCursorDrawable="@drawable/ic_cursor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/sectionResEditProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sectionEditPriceProduct"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/resEditNameProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/resEditCategoryProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/resEditPriceProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonEditProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sectionResEditProduct"
+            android:layout_marginTop="20dp"
+            android:text="@string/editProduct"
+            android:background="@drawable/rectangle_rounded_some"
+            android:textColor="@color/black"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
